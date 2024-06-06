@@ -12,3 +12,9 @@ body {
     color: #212121;
     line-height: 1.5;
 }
+
+.list-img {
+    display: flex;
+    flex-wrap: no-wrap;
+    width: 100%;
+}
