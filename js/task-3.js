@@ -3,5 +3,6 @@ const nameOutput = document.querySelector("#name-output");
 
 nameInput.addEventListener("input", (event) => {
     let realName = nameInput.value.trim();
-    output.textContent = !realName ? "Anonymous" : realName;
+    nameOutput.textContent = realName !== "" ? realName : "Anonymous";  
 });
+
