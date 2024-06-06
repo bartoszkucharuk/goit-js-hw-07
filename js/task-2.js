@@ -14,7 +14,7 @@ const images = [
 ];
 
 
-const gallery = docyment.querySelector(`.gallery`);
+const gallery = document.querySelector(`.gallery`);
 const galleryImages = images.map((image) => `
     <li class="gallery-list)>
         <img scr="${images.url}" alt= "${images.alt}">
