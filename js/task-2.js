@@ -20,7 +20,7 @@ const galleryImages = images.map((image) => `
         <img scr="${images.url}" alt= "${images.alt}">
     </li>`).join(``);
 
-gallery.insertAdjascentHTML("beforend", galleryImages);
+gallery.insertAdjacentHTML("beforeend", galleryImages);
 
 
 //   const galleryItems = images.map(image =>
