@@ -12,32 +12,19 @@ body {
     color: #212121;
     line-height: 1.5;
 }
-
-.gallery-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 1440px;
-    height: 848px;
-    margin: 0 auto;
-}
-
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 48px 24px;
+    justify-content: center;
+    gap: 24px;
     list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
-.gallery li {
-    flex: 0 0 360px;
-}
-
-.gallery img {
-    width: 360px;
-    height: 300px;
-    object-fit: cover;
+.img {
     display: block;
+}
+
+.gallery-item {
+    max-width: calc((100% - 2 * 24px) / 3);
+    min-width: 200px;
 }
