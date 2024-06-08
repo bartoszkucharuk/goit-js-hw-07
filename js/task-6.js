@@ -3,34 +3,35 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
-
-const input = document.querySelector(`input[type="number"]`);
-const createBtn = document.querySelector("button[data-create]");
-const destroyBtn = document.querySelector("button[data-destroy]");
-const boxesContainer = document.getElementById("boxes");
-
-// adding new boxes function by creating whole new fragment of document in memory 
+const controls = document.getElementById(`controls`);
+const input = document.querySelector(`input`);
+const createBtn = controls.querySelector(`[data-create]`);
+const destroyBtn = controls.querySelector(`[data-destroy]`);
+const boxesContainer = document.getElementById(`boxes`);
 function createBoxes(amount) {
-    const dFrag = document.createDocumentFragment();
-    let size = 30;
+  const fragment = document.createDocumentFragment();
+  let size = 30;
+  for (let i = 0; i<amount; i++) {
+    const div = document.createElement(`div`);
+    div.style.width = `${size}px`;
+    div.style.height = `${size}px`;
+    div.style.backgroundColor = getRandomHexColor();
+    fragment.appendChild(div);
+    size +=10;
+  }
+boxesContainer.innerHTML = ``;
+boxesContainer.appendChild(fragment);}
+ function destroyBoxes() {
+  boxesContainer.innerHTML = ``;
+ }
+createBtn/addEventListener('click', () => {
+  const amount = Number(input.value);
+  if (amount >= 1 && amount <= 100){
+    createBoxes(amount);
+    input.value = ``;
+  }
+});
+destroyBtn.addEventListener(`click`, () => {
+  destroyBoxes();
 
-    for (let i = 0; i < amount; i++) {
-        const div = document.createElement(`div`);
-        div.style.width = `${size}`;
-        div.style.height = `${size}`;
-        div.style.background = getRandomHexColor();
-        dFrag.appendChild(div);
-        size += 10;
-    }
-    // clearing content by insert empty space in code
-    boxesContainer.innerHtml = ``;
-    boxesContainer.appendChild(dFrag);
-}
-    
-function destroyBoxes() {
-        boxesContainer.innerHTML = ``;
-}
-
-createBtn.addEventListener("click", createBoxes);
-destroyBtn.addEventListener("click", destroyBoxes);
-
+})
