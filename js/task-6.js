@@ -31,3 +31,6 @@ function destroyBoxes() {
         boxesContainer.innerHTML = ``;
 }
 
+createBtn.addEventListener("click", createBoxes);
+destroyBtn.addEventListener("click", destroyBoxes);
+
