@@ -13,6 +13,10 @@ body {
     line-height: 1.5;
 }
 
+#categories {
+    list-style: none;
+}
+
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -21,9 +25,7 @@ body {
     padding: 0;
     margin: 0;
 }
-.gallery-item {
-    list-style: none;
-}
+
 .gallery img {
     width: 360px;
     height: 300px;
