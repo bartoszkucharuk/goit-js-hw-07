@@ -22,10 +22,12 @@ body {
     padding: 0;
     margin: 0;
 }
-/* 
+
 .gallery li {
     flex: 0 0 360px;
 }
+
+/* 
 
 .gallery img {
     width: 360px;
