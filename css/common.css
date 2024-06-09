@@ -23,9 +23,9 @@ body {
     margin: 0;
 }
 
-.gallery li {
+/* .gallery li {
     flex: 0 0 360px;
-}
+} */
 
 .gallery img {
     width: 360px;
