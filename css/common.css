@@ -12,14 +12,7 @@ body {
     color: #212121;
     line-height: 1.5;
 }
-.gallery-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 1440px;
-    height: 848px;
-    margin: 0 auto;
-}
+
 
 .gallery {
     display: flex;
@@ -29,7 +22,7 @@ body {
     padding: 0;
     margin: 0;
 }
-
+/* 
 .gallery li {
     flex: 0 0 360px;
 }
@@ -39,4 +32,4 @@ body {
     height: 300px;
     object-fit: cover;
     display: block;
-}
+} */
