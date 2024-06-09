@@ -27,11 +27,9 @@ body {
     flex: 0 0 360px;
 }
 
-/* 
-
 .gallery img {
     width: 360px;
     height: 300px;
     object-fit: cover;
     display: block;
-} */
+}
