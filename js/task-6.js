@@ -5,9 +5,16 @@ const boxesContainer = document.getElementById('boxes');
 createBtn.addEventListener("click", handleCreate);
 destroyBtn.addEventListener("click", handleDestroy);
 
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, "0")}`;
+}
+
 function createBoxes(amount) {
-  let size = 30;
-  let innerHTML = "";
+    let innerHTML = "";
+    let size = 30;
+
     for (let i = 0; i < amount; i++) {
         innerHTML += `<div style="
             width: ${size}px;
@@ -16,7 +23,7 @@ function createBoxes(amount) {
         </div>`;
         size += 10;
     }
-boxesContainer.innerHTML = innerHTML;
+    boxesContainer.innerHTML = innerHTML;
 }
 
 function handleCreate() {
@@ -29,11 +36,5 @@ function handleCreate() {
 }
 
 function handleDestroy() {
-  boxesContainer.innerHTML = "";
-}
-
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, "0")}`;
+    boxesContainer.innerHTML = "";
 }
